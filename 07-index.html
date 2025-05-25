@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>橋本侑依の自己紹介ページ</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background-color: #add8e6; /* 水色 */
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+      }
+      .section {
+        margin-bottom: 40px;
+      }
+      .photo-grid {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      .photo {
+        width: 200px;
+        height: 500px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .photo img {
+        width: 60%;
+        height: 70%;
+        object-fit: cover;
+      }
+      .detail {
+        display: none;
+        margin-top: 20px;
+      }
+      .detail.active {
+        display: block;
+      }
+      h2 {
+        border-bottom: 2px solid #000;
+      }
+      a {
+        color: blue;
+        text-decoration: underline;
+      }
+    </style>
+    <script>
+      function showDetail(id) {
+        document.querySelectorAll('.detail').forEach((el) => el.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>橋本侑依の自己紹介サイト</h1>
+
+      <div class="section">
+        <h2>自己紹介　　　　　　　　　趣味　　　　　　　　　大学内の活動</h2>
+        <div class="photo-grid">
+          <div class="photo" onclick="showDetail('intro')">
+            <img src="プロフィールイラスト.png" alt="自己紹介の写真" />
+          </div>
+          <div class="photo" onclick="showDetail('hobby')">
+            <img src="推しイラスト.png" alt="趣味の写真" />
+          </div>
+          <div class="photo" onclick="showDetail('activity')">
+            <img src="取材イラスト.png" alt="活動の写真" />
+          </div>
+        </div>
+      </div>
+
+      <div id="intro" class="detail">
+        <h2>自己紹介</h2>
+        <img src="顔1.jpg" alt="顔写真" style="width: 150px" />
+        <p><strong>名前:</strong> 橋本侑依</p>
+        <p><strong>出身:</strong> 兵庫県 太子町</p>
+        <p><strong>大学:</strong> 武庫川女子大学 社会情報学部 社会情報学科</p>
+        <p><strong>ゼミ内容:</strong> 言語処理ゼミ</p>
+      </div>
+
+      <div id="hobby" class="detail">
+        <h2>趣味</h2>
+        <h3>お笑い</h3>
+        <img src="お笑いライブ.jpg" alt="お笑いの写真" style="width: 200px" />
+        <p>
+          家でお笑いを見ることや実際に劇場に行ってお笑いを見ることも好きです。私のお気に入りの劇場はよしもと漫才劇場です。
+        </p>
+
+        <h3>ライブ参戦</h3>
+        <img src="音楽ライブ1.jpg" alt="ライブの写真" style="width: 200px" />
+        <p>ライブ参戦が趣味で今年だけでも4回ほどライブに参戦しました。生の音楽は迫力があるためとても楽しいです</p>
+      </div>
+
+      <div id="activity" class="detail">
+        <h2>大学内の活動</h2>
+        <p>大学内では学生広報という校内ボランティアに参加しており、そこの幹部をしております。</p>
+
+        <h3>学外の取材活動</h3>
+        <img src="日経シンポジウム.JPG" alt="日経シンポジウム" style="width: 200px" />
+        <p>
+          昨年度は日経STEAM 2024シンポジウムの取材をさせていただき、<a
+            href="https://steam.nikkei.com/eventreport/20240827_symposium/steamcoverage/"
+            target="_blank"
+            >記事を掲載</a
+          >させていただきました。
+        </p>
+
+        <h3>リビエール</h3>
+        <img src="リビエール.jpg" alt="リビエール" style="width: 200px" />
+        <p>
+          リビエールという大学冊子の見開きページを担当し、<a
+            href="https://info.mukogawa-u.ac.jp/digitalbook/mwu_riviere/vol_2/#target/page_no=21"
+            target="_blank"
+            >駅近の魅力を伝える記事</a
+          >を書きました。
+        </p>
+
+        <h3>March</h3>
+        <img src="March.png" alt="March" style="width: 200px" />
+        <p>
+          現在制作途中で、夏頃発行を目指して学生広報紙Marchの制作に取り組んでおり、私はそのリーダーを務めています。過去のMarchは以下のサイトで見ることができます。
+          <a href="https://www.mukogawa-u.ac.jp/magazine/m_arch/m_arch.html" target="_blank">March公式サイト</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
